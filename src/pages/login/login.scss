@@ -1,0 +1,47 @@
+page-login {
+  
+  ion-title {
+      padding: 25px 10px 10px 0px !important;  
+  }
+  .login-content { 
+      .login-box {
+          margin-top: 40px;
+      }
+      .item-inner {
+          border-bottom: none !important;
+      }
+
+      ion-content {
+          padding: 7px !important;
+      }
+
+      ion-row {
+          align-items: center;
+          text-align: center;
+      }
+
+      ion-item {
+          border-radius: 5px !important;
+          margin-bottom: 10px;
+      }
+
+      ion-input {
+          border: 1px solid gray;
+          border-radius: 5px !important;
+          .text-input {
+            padding-left: 5px !important;
+          }
+      }
+
+      .rounded-button{
+          border-radius: 5px !important;
+          margin-left: 16px !important;
+          width:92% !important;
+      }
+      
+      .input-cover {
+          position: static;
+      }
+  }
+}
+

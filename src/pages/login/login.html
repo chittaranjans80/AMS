@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Asset Management</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="login-content" padding>
+  <div class="login-box">
+
+    <ion-item class="logo">
+      <img src="assets/icon/ams.png">
+    </ion-item>
+
+    <form (ngSubmit)="checkAuth(loginForm.value)" #loginForm="ngForm">
+      <ion-item>
+        <ion-input type="text" placeholder="Username" 
+                  name="username" ngModel required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="password" placeholder="Password" 
+                  name="password" ngModel required>
+        </ion-input>
+      </ion-item>
+      <button ion-button block type="submit" 
+              class="rounded-button"> Login 
+      </button>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>asset-details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content scroll="false" class="asset-details-content" padding>
+    <form (ngSubmit)="updateAssetInfo()">
+      <ion-item>
+      	<ion-label class="label-info">Barcode: </ion-label>
+      	<ion-label name="barcode"> {{assetInfo.item_asset_number}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+      	<ion-label class="label-info">Asset Name: </ion-label>
+      	<ion-label name="assestName"> 
+        {{assetInfo.item_name}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        	<ion-label class="label-info">Serial No: </ion-label>
+        	<ion-label name="serialNo"> {{assetInfo.item_general_serialnumber}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        	<ion-label class="label-info">Invoice No: </ion-label>
+        	<ion-label name="invoiceNo"> {{assetInfo.item_finance_accountno}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        	<ion-label class="label-info">Location: </ion-label>
+        	<ion-select [(ngModel)]= "assetInfo.location_id" 
+                name="locationId">
+          	<ion-option *ngFor = "let location of locationList"
+          	 			value= "{{location.location_id}}">{{location.location_name}}
+          	</ion-option>
+        	</ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label class="label-info">Issued To: </ion-label>
+        	<ion-input type="text" [(ngModel)]= "assetInfo.item_general_checked_out_to" name = "issuedTo">
+        	</ion-input>
+      </ion-item>
+
+      <button ion-button block type="submit" 
+              class="rounded-button"> Update details 
+      </button>
+  </form>
+</ion-content>
+

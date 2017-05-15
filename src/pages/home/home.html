@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button (click)= "userLogout()">
+        Logout      
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Barcode scanner
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home-content" padding>
+  <h3>click to scan asset barcode</h3>
+  <button ion-button block type="button" class="rounded-button"
+    (click)="startScanning()">Scan barcode
+  </button>
+</ion-content>
